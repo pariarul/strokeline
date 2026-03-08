@@ -18,7 +18,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    {name: "Home", href: "/"},
+    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Expertise", href: "/expertise" },
@@ -30,13 +30,16 @@ const Navbar = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", damping: 20, stiffness: 100 }}
-        className={`w-full max-w-4xl glass-nav rounded-full px-4 sm:px-8 py-3 flex justify-between items-center pointer-events-auto transition-all duration-500 ${
-          scrolled ? "max-w-3xl py-2 mt-[-4px]" : ""
-        }`}
+        className={`w-full max-w-4xl glass-nav rounded-full px-4 sm:px-8 py-3 flex justify-between items-center pointer-events-auto transition-all duration-500 ${scrolled ? "max-w-3xl py-2 mt-[-4px]" : ""
+          }`}
       >
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 bg-brand-orange flex items-center justify-center rounded-xl shadow-[0_8px_16px_-4px_rgba(255,138,0,0.4)] group-hover:rotate-12 transition-transform">
-            <span className="text-white font-black text-lg">S</span>
+          <div className="w-9 h-9  flex items-center justify-center rounded-xl shadow-[0_8px_16px_-4px_rgba(255,138,0,0.4)] group-hover:rotate-12 transition-transform">
+            <img
+              src="/logo.png"
+              alt="Company Logo"
+              className="w-18 h-18 object-contain"
+            />
           </div>
           <div className="hidden sm:flex flex-col">
             <span className="font-black text-sm tracking-tight text-brand-black dark:text-brand-white leading-none">
